@@ -1,6 +1,6 @@
 # user_details
 
-CREATE TABLE user_details(id INT AUTO_INCREMENT NOT NULL,username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
+CREATE TABLE user_details(id INT AUTO_INCREMENT,username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
 PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(id), gender CHAR(1));
 
 ALTER TABLE user_details ADD user_id INT;
@@ -12,6 +12,9 @@ ALTER TABLE user_details DROP user_id;
 SELECT * FROM user_details;
  
 DROP TABLE user_details;
+
+INSERT INTO user_details VALUES (1,'jayanthi','jay@gmail.com','j1234','2020-02-03','F',9888888999);
+
 #task1
 SELECT * FROM task1;
 
