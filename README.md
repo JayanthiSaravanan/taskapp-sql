@@ -1,8 +1,6 @@
 # user_details
-
-
 CREATE TABLE user_details(username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
-PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP,PRIMARY KEY(username));
+PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(username), gender CHAR(1));
 
 ALTER TABLE user_details ADD user_id INT;
 
