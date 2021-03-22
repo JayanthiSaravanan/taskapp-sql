@@ -1,13 +1,14 @@
 # user_details
 
 
-CREATE TABLE user_details(username VARCHAR(20)NOT NULL, email_id VARCHAR(20) NOT NULL, UNIQUE(email_id),
-PASSWORD VARCHAR(20) NOT NULL, DATE TIMESTAMP,PRIMARY KEY(username));
+CREATE TABLE user_details(username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
+PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP,PRIMARY KEY(username));
 
 ALTER TABLE user_details ADD user_id INT;
 
-ALTER TABLE user_details ADD phone_no INT;
+ALTER TABLE user_details ADD phone_no LONG;
 
+ALTER TABLE user_details DROP user_id;
 
 SELECT * FROM user_details;
  
