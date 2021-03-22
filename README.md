@@ -1,6 +1,6 @@
 # user_details
 
-CREATE TABLE user_details(username VARCHAR(20), email_id VARCHAR(20), PASSWORD VARCHAR(20));
+CREATE TABLE user_details(username VARCHAR(20)NOT NULL, email_id VARCHAR(20) NOT NULL, UNIQUE(email_id), PASSWORD VARCHAR(20) NOT NULL);
 
 SELECT * FROM user_details;
 
