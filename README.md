@@ -1,6 +1,6 @@
 # user_details
 
-Feature 1:
+## Feature 1:
 
 CREATE TABLE user_details(id INT AUTO_INCREMENT,username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
 PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(id), gender CHAR(1));
@@ -19,7 +19,7 @@ INSERT INTO user_details (username,email_id,PASSWORD,created_date,gender,phone_n
 
 DELETE FROM user_details WHERE id = 1;
 
-Feature 2:
+## Feature 2:
 
 SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
 
