@@ -1,5 +1,12 @@
-# TASK1
+# user_details
+
+CREATE TABLE user_details(username VARCHAR(20), email_id VARCHAR(20), PASSWORD VARCHAR(20));
+
+SELECT * FROM user_details;
+
+#task1
 SELECT * FROM task1;
+
 
 SELECT SYSDATE();--sydate
 SELECT SYSDATE() +1;---together
