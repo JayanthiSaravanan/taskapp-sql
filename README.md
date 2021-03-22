@@ -1,10 +1,11 @@
 # user_details
 
 
+
 CREATE TABLE user_details(id INT AUTO_INCREMENT,username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
 PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(id), gender CHAR(1));
 
-ALTER TABLE user_details ADD user_id INT;
+ALTER TABLE user_details ADD DOB DATE;
 
 ALTER TABLE user_details ADD phone_no LONG;
 
@@ -17,6 +18,8 @@ DROP TABLE user_details;
 INSERT INTO user_details (username,email_id,PASSWORD,created_date,gender,phone_no) VALUES ('jayanthi','jay@gmail.com','j1234','2020-02-03','F',9888888999);
 
 DELETE FROM user_details WHERE id = 1;
+
+SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
 
 #  task1
 SELECT * FROM task1;
