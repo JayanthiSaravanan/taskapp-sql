@@ -4,6 +4,8 @@ CREATE TABLE user_details(username VARCHAR(20)NOT NULL, email_id VARCHAR(20) NOT
 
 SELECT * FROM user_details;
 
+DROP TABLE user_details;
+
 #task1
 SELECT * FROM task1;
 
