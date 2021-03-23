@@ -2,7 +2,15 @@
 
 ## Feature 1: Registration
 ```sql
-CREATE TABLE user_details(id INT AUTO_INCREMENT,username VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
+CREATE TABLE roles (id INT, NAME VARCHAR(20)NOT NULL,PRIMARY KEY(id));
+```
+```
+INSERT INTO roles(id,NAME) VALUES (1,'USER');
+INSERT INTO roles(id,NAME) VALUES (2,'ADMIN');
+```
+
+```sql
+CREATE TABLE user_details(id INT AUTO_INCREMENT,name VARCHAR(20)NOT NULL, email_id VARCHAR(50) NOT NULL, UNIQUE(email_id),
 PASSWORD VARCHAR(20) NOT NULL, created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY(id), gender CHAR(1),role_id INT DEFAULT 1,
 CONSTRAINT user_details_id_fk FOREIGN KEY(id) REFERENCES roles(id),
 CONSTRAINT user_details_chk_pwd CHECK(LENGTH(PASSWORD)>=8));
@@ -12,32 +20,19 @@ CONSTRAINT user_details_chk_pwd CHECK(LENGTH(PASSWORD)>=8));
 ## Feature 2: Login user
 
 ```sql
-SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
+
+SELECT name FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j12345678';
 ```
 
 ## Feature 3: List All Users 
 
 ```sql
-SELECT * FROM user_details;
+SELECT name,phone_no FROM user_details order by name;
 ```
-
 ## Feature 4: change password
 ```sql
 UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
 ```
-
-## Feature 5: Created role table
-
-CREATE TABLE roles (id INT AUTO_INCREMENT, roles_name VARCHAR(20),PRIMARY KEY(id));
-
-INSERT INTO roles(roles_name) VALUES ('Admin');
-INSERT INTO roles(roles_name) VALUES ('User');
-
-ALTER TABLE user_details ADD role_id INT DEFAULT 1;
-
-SELECT * FROM user_details;
-
-
 ## Feature 6: Others
 ```sql
 ALTER TABLE user_details ADD DOB DATE;
