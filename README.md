@@ -19,10 +19,19 @@ INSERT INTO user_details (username,email_id,PASSWORD,created_date,gender,phone_n
 
 DELETE FROM user_details WHERE id = 1;
 
-## Feature 2:
+## Feature 2: Login user
 
+```sql
 SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
+'''
+## Feature 3: List user all user 
+```sql
 SELECT * FROM user_details;
+```
+## Feature 4: change password
+```sql
+UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
+```
 
 SELECT gender, COUNT(*) FROM user_details GROUP BY gender;
 
@@ -32,11 +41,10 @@ SELECT * FROM user_details ORDER BY username ASC;
 
 SELECT COUNT(gender) FROM user_details;
 
-SELECT * FROM user_details 
 
 DELETE FROM user_details WHERE username ='narain';
 
-UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
+
 
 
 
