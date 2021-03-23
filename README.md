@@ -107,8 +107,8 @@ UPDATE item_orders SET price =35, quantitiy =6, total_price =210 WHERE item_id =
 
 DELETE FROM item_orders WHERE item_id = 6;
 ```
--- DQL
-```sql
+
+```sql-dql
 SELECT * FROM item_orders;
 ```
 ```sql
