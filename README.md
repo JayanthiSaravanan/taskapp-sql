@@ -34,6 +34,10 @@ SELECT name,phone_no FROM user_details order by name;
 ```sql
 UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
 ```
+## Feature 5: change role
+```sql
+UPDATE user_details SET role_id =2 WHERE id=1;
+```
 ## Feature 6: Others
 ```sql
 ALTER TABLE user_details ADD DOB DATE;
