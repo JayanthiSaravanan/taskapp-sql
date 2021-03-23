@@ -24,30 +24,38 @@ UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
 ```
 
 ## Feature 5: Others
+```sql
 ALTER TABLE user_details ADD DOB DATE;
-
+```
+```sql
 ALTER TABLE user_details ADD phone_no LONG;
-
+```
+```sql
 ALTER TABLE user_details DROP user_id;
-
-SELECT * FROM user_details;
- 
+```
+```sql
 DROP TABLE user_details;
-
+```
+```sql
 INSERT INTO user_details (username,email_id,PASSWORD,created_date,gender,phone_no) VALUES ('jayanthi','jay@gmail.com','j1234','2020-02-03','F',9888888999);
+```
 
-DELETE FROM user_details WHERE id = 1;
 
+```sql
 SELECT gender, COUNT(*) FROM user_details GROUP BY gender;
-
+```
+```sql
 SELECT * FROM user_details ORDER BY username DESC;
-
+```
+```sql
 SELECT * FROM user_details ORDER BY username ASC;
-
+```
+```sql
 SELECT COUNT(gender) FROM user_details;
-
+```
+```sql
 DELETE FROM user_details WHERE username ='narain';
-
+```
 
 #  task1
 SELECT * FROM task1;
