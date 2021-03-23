@@ -32,11 +32,11 @@ SELECT name,phone_no FROM user_details order by name;
 ```
 ## Feature 4: change password
 ```sql
-UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
+UPDATE user_details SET PASSWORD ='jay1234',modified_date = current_timestamp WHERE id =2;
 ```
 ## Feature 5: change role
 ```sql
-UPDATE user_details SET role_id =2 WHERE id=1;
+UPDATE user_details SET role_id =2,modified_date = CURRENT_TIMESTAMP WHERE id=1;
 ```
 ## Feature 6: Others
 ```sql
