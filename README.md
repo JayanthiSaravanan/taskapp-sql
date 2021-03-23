@@ -2,7 +2,7 @@
 
 ## Feature 1: Registration
 ```sql
-CREATE TABLE roles (id INT, NAME VARCHAR(20)NOT NULL,PRIMARY KEY(id));
+CREATE TABLE roles (id INT, NAME VARCHAR(20)NOT NULL unique(name),PRIMARY KEY(id));
 ```
 ```
 INSERT INTO roles(id,NAME) VALUES (1,'USER');
