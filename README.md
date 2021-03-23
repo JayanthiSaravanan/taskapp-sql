@@ -23,8 +23,10 @@ DELETE FROM user_details WHERE id = 1;
 
 ```sql
 SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
-'''
-## Feature 3: List user all user 
+```
+
+## Feature 3: List All Users 
+
 ```sql
 SELECT * FROM user_details;
 ```
