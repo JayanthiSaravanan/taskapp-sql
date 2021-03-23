@@ -22,6 +22,23 @@ DELETE FROM user_details WHERE id = 1;
 ## Feature 2:
 
 SELECT  * FROM user_details WHERE email_id='jay@gmail.com' AND PASSWORD ='j1234';
+SELECT * FROM user_details;
+
+SELECT gender, COUNT(*) FROM user_details GROUP BY gender;
+
+SELECT * FROM user_details ORDER BY username DESC;
+
+SELECT * FROM user_details ORDER BY username ASC;
+
+SELECT COUNT(gender) FROM user_details;
+
+SELECT * FROM user_details 
+
+DELETE FROM user_details WHERE username ='narain';
+
+UPDATE user_details SET PASSWORD ='jay1234' WHERE id =2;
+
+
 
 #  task1
 SELECT * FROM task1;
