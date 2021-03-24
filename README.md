@@ -40,6 +40,34 @@ UPDATE user_details SET role_id =2,modified_date = CURRENT_TIMESTAMP WHERE id=1;
 ```
 ## Module 2: Task
 ```sql
+CREATE TABLE task(id INT AUTO_INCREMENT, task_name VARCHAR(20) NOT NULL, STATUS VARCHAR(20) DEFAULT 'PENDING',
+ PRIMARY KEY (id),
+ start_date TIMESTAMP,
+ end_date TIMESTAMP);
+```
+```
+INSERT INTO task(task_name) VALUES ('sql');
+INSERT INTO task(task_name) VALUES ('JavaScript');
+INSERT INTO task(task_name) VALUES ('HTML');
+INSERT INTO task(task_name) VALUES ('Java');
+```
+```
+
+UPDATE task SET STATUS='Inprogress',start_date ='2020-03-20' WHERE id = 4;
+UPDATE task SET STATUS='Inprogress',start_date ='2020-03-20' WHERE id = 3;
+UPDATE task SET STATUS='Completed',end_date ='2020-05-20' WHERE id = 3;
+```
+```
+ALTER TABLE task ADD priority INT;
+```
+```
+UPDATE task SET priority=2 WHERE id =2;
+UPDATE task SET priority=3 WHERE id =1;
+UPDATE task SET priority=1 WHERE id =4;
+```
+```
+
+```sql
 CREATE TABLE task(id INT AUTO_INCREMENT, task_name VARCHAR(20) NOT NULL, STATUS VARCHAR(20) DEFAULT 'Pending', 
 created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
 ```
