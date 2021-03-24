@@ -38,6 +38,27 @@ UPDATE user_details SET PASSWORD ='jay1234',modified_date = current_timestamp WH
 ```sql
 UPDATE user_details SET role_id =2,modified_date = CURRENT_TIMESTAMP WHERE id=1;
 ```
+## Module 2: Task
+```sql
+CREATE TABLE task(id INT AUTO_INCREMENT, task_name VARCHAR(20) NOT NULL, STATUS VARCHAR(20) DEFAULT 'Pending', 
+created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
+```
+```
+INSERT INTO task(task_name,STATUS,created_date) VALUES ('sql','Completed', '2020-02-20');
+INSERT INTO task(task_name,STATUS,created_date) VALUES ('javascript','Pending', '2020-04-25');
+INSERT INTO task(task_name,STATUS,created_date) VALUES ('Html','Pending', '2020-02-02');
+INSERT INTO task(task_name,created_date) VALUES ('java','2020-03-04');
+```
+```
+UPDATE task SET STATUS='Pending' WHERE id=4;
+```
+```
+ALTER TABLE task ADD priority INT;
+```
+```
+UPDATE task SET priority=NULL WHERE id =1;
+```
+
 ## Feature 6: Others
 ```sql
 ALTER TABLE user_details ADD DOB DATE;
@@ -71,7 +92,14 @@ SELECT COUNT(gender) FROM user_details;
 ```sql
 DELETE FROM user_details WHERE username ='narain';
 ```
+```
 
+UPDATE task SET priority=2 WHERE id =2;
+UPDATE task SET priority=3 WHERE id =3;
+UPDATE task SET priority=1 WHERE id =4;
+DROP TABLE task;
+SELECT * FROM task;
+```
 
 # shopping
 ```sql
