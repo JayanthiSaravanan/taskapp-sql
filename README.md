@@ -45,48 +45,26 @@ CREATE TABLE task(id INT AUTO_INCREMENT, task_name VARCHAR(20) NOT NULL, STATUS 
  start_date TIMESTAMP,
  end_date TIMESTAMP);
 ```
-```
+```sql
 INSERT INTO task(task_name) VALUES ('sql');
 INSERT INTO task(task_name) VALUES ('JavaScript');
 INSERT INTO task(task_name) VALUES ('HTML');
 INSERT INTO task(task_name) VALUES ('Java');
 ```
-```
+```sql
 
 UPDATE task SET STATUS='Inprogress',start_date ='2020-03-20' WHERE id = 4;
 UPDATE task SET STATUS='Inprogress',start_date ='2020-03-20' WHERE id = 3;
 UPDATE task SET STATUS='Completed',end_date ='2020-05-20' WHERE id = 3;
 ```
-```
+```sql
 ALTER TABLE task ADD priority INT;
 ```
-```
+```sql
 UPDATE task SET priority=2 WHERE id =2;
 UPDATE task SET priority=3 WHERE id =1;
 UPDATE task SET priority=1 WHERE id =4;
 ```
-```
-
-```sql
-CREATE TABLE task(id INT AUTO_INCREMENT, task_name VARCHAR(20) NOT NULL, STATUS VARCHAR(20) DEFAULT 'Pending', 
-created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id));
-```
-```
-INSERT INTO task(task_name,STATUS,created_date) VALUES ('sql','Completed', '2020-02-20');
-INSERT INTO task(task_name,STATUS,created_date) VALUES ('javascript','Pending', '2020-04-25');
-INSERT INTO task(task_name,STATUS,created_date) VALUES ('Html','Pending', '2020-02-02');
-INSERT INTO task(task_name,created_date) VALUES ('java','2020-03-04');
-```
-```
-UPDATE task SET STATUS='Pending' WHERE id=4;
-```
-```
-ALTER TABLE task ADD priority INT;
-```
-```
-UPDATE task SET priority=NULL WHERE id =1;
-```
-
 ## Feature 6: Others
 ```sql
 ALTER TABLE user_details ADD DOB DATE;
